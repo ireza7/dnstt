@@ -1,0 +1,6 @@
+# dnstt-worker secrets
+# Copy this file to .dev.vars and fill in your values
+
+# Server private key (hex-encoded, 64 hex chars = 32 bytes)
+# Generate using: cd ../dnstt-server && go build && ./dnstt-server -gen-key
+DNSTT_PRIVKEY=your-private-key-hex-here

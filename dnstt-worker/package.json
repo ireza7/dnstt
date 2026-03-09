@@ -8,7 +8,23 @@
     "deploy": "wrangler deploy",
     "test": "node --experimental-vm-modules test/test.js"
   },
-  "keywords": ["dns", "tunnel", "doh", "cloudflare-worker", "dnstt"],
+  "cloudflare": {
+    "bindings": {
+      "DNSTT_DOMAIN": {
+        "description": "Your DNS tunnel domain (e.g., `t.example.com`). This must match the NS record you configured."
+      },
+      "DNSTT_PRIVKEY": {
+        "description": "Server private key (64 hex chars). Generate with: `./dnstt-server -gen-key`"
+      },
+      "DNSTT_UPSTREAM": {
+        "description": "Upstream HTTP endpoint for tunnel traffic (e.g., `https://your-server.com/tunnel`). Leave empty if not needed."
+      },
+      "DNSTT_MTU": {
+        "description": "Maximum DNS response payload size. Default `1232` works for most resolvers. Use `512` for maximum compatibility."
+      }
+    }
+  },
+  "keywords": ["dns", "tunnel", "doh", "cloudflare-worker", "dnstt", "censorship-circumvention"],
   "author": "",
   "license": "ISC",
   "description": "dnstt DNS tunnel server running as a Cloudflare Worker (DoH endpoint)",
