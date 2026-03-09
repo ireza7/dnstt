@@ -4,13 +4,10 @@ compatibility_date = "2024-12-01"
 
 [vars]
 # The DNS domain used for the tunnel (e.g., "t.example.com")
-# DNSTT_DOMAIN = "t.example.com"
-
-# Server private key (hex-encoded, 64 hex chars = 32 bytes)
-# DNSTT_PRIVKEY = ""
-
-# Upstream address to forward tunnel streams to (e.g., "tcp://your-server:8080")
-# DNSTT_UPSTREAM = ""
+DNSTT_DOMAIN = "t.example.com"
 
 # Maximum DNS response payload size
 DNSTT_MTU = "1232"
+
+# Upstream address to forward tunnel streams to
+# DNSTT_UPSTREAM = ""

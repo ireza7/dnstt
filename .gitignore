@@ -1,2 +1,5 @@
 dnstt-client/dnstt-client
 dnstt-server/dnstt-server
+dnstt-worker/node_modules/
+dnstt-worker/.dev.vars
+dnstt-worker/.wrangler/
