@@ -1,0 +1,18 @@
+{
+  "name": "dnstt-worker",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node --experimental-vm-modules test/test.js"
+  },
+  "keywords": ["dns", "tunnel", "doh", "cloudflare-worker", "dnstt"],
+  "author": "",
+  "license": "ISC",
+  "description": "dnstt DNS tunnel server running as a Cloudflare Worker (DoH endpoint)",
+  "devDependencies": {
+    "wrangler": "^4.71.0"
+  }
+}
